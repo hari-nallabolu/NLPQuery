@@ -18,7 +18,7 @@ THEME_COLORS = {
 # Use a consistent color palette for all charts
 CHART_COLORS = px.colors.qualitative.Bold
 
-BACKEND_URL = "http://localhost:8000"
+BACKEND_URL = "https://redyoib.streamlit.app"
 
 st.set_page_config(page_title="GenAI POC", layout="wide")
 
