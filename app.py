@@ -19,6 +19,7 @@ THEME_COLORS = {
 CHART_COLORS = px.colors.qualitative.Bold
 
 BACKEND_URL = "https://redyoib.streamlit.app"
+print(f"[INFO] BACKEND_URL is set to: {BACKEND_URL}")
 
 st.set_page_config(page_title="GenAI POC", layout="wide")
 
@@ -553,6 +554,7 @@ with tab1:
             
             with st.spinner("Generating SQL and fetching results..."):
                 response = requests.post(f"{BACKEND_URL}/query", json={"user_query": user_query})
+                print(f"[INFO] BACKEND_URL is set to: {response}")
                 if response.status_code == 200:
                     res = response.json()
                     sql = res["sql"]
