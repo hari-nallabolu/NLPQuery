@@ -5,6 +5,13 @@ from openai_sql import nl_to_sql_with_understanding
 from pinning import setup_pinning, save_pin, get_pins, update_pin, save_query_history, get_query_history
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://redyoib.streamlit.app", "http://localhost:8501", "http://localhost:8502", "http://localhost:8503"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 setup_pinning()
 
 class Query(BaseModel):
