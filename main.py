@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from db import execute_sql
 from openai_sql import nl_to_sql_with_understanding
 from pinning import setup_pinning, save_pin, get_pins, update_pin, save_query_history, get_query_history
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 app.add_middleware(
