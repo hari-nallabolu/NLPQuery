@@ -22,7 +22,7 @@ This project is a Proof of Concept (POC) for a GenAI-based system that allows us
 
 | Layer        | Technology         |
 |--------------|--------------------|
-| Frontend     | Streamlit          |
+| Frontend     | Streamlit, Plotly   |
 | Backend      | FastAPI            |
 | Database     | SQLite             |
 | Gen AI Model | OpenAI GPT-4       |
@@ -56,6 +56,8 @@ genai_poc/
 ```bash
 pip install -r requirements.txt
 ```
+# Plotly is required for charting support
+pip install plotly
 3. **Create SQLite DB**
 ```bash
 sqlite3 genai.db < schema.sql
