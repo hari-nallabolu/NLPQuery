@@ -555,6 +555,7 @@ with tab1:
             
             with st.spinner("Generating SQL and fetching results..."):
                 response = requests.post(f"{BACKEND_URL}/query", json={"user_query": user_query})
+                st.json({"data": BACKEND_URL})
                 print(f"[INFO] BACKEND_URL is set to: {response}")
                 st.json({"data": response})
                 if response.status_code == 200:
