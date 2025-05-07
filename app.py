@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import re
 import json
-import streamlit as st
+
 
 # Define a custom theme color palette
 THEME_COLORS = {
@@ -556,7 +556,7 @@ with tab1:
             with st.spinner("Generating SQL and fetching results..."):
                 response = requests.post(f"{BACKEND_URL}/query", json={"user_query": user_query})
                 print(f"[INFO] BACKEND_URL is set to: {response}")
-                 st.json({"data": response})
+                st.json({"data": response})
                 if response.status_code == 200:
                     res = response.json()
                     sql = res["sql"]
